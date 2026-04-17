@@ -1,0 +1,46 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+==================================================
+  READ TEST - pre-loaded memory[i] = i*10        
+==================================================
+--------------------------------------------------
+Byte address      : 0  (0x00000000)
+Expected index    : memory[0]  => value = 0
+[BUG]  address[8:0]  = 0  => read_data = 0     CORRECT
+[FIX]  address[10:2] = 0  => read_data = 0     CORRECT
+--------------------------------------------------
+Byte address      : 4  (0x00000004)
+Expected index    : memory[1]  => value = 10
+[BUG]  address[8:0]  = 4  => read_data = 40  WRONG <---
+[FIX]  address[10:2] = 1  => read_data = 10     CORRECT
+--------------------------------------------------
+Byte address      : 8  (0x00000008)
+Expected index    : memory[2]  => value = 20
+[BUG]  address[8:0]  = 8  => read_data = 80  WRONG <---
+[FIX]  address[10:2] = 2  => read_data = 20     CORRECT
+--------------------------------------------------
+Byte address      : 12  (0x0000000c)
+Expected index    : memory[3]  => value = 30
+[BUG]  address[8:0]  = 12  => read_data = 120  WRONG <---
+[FIX]  address[10:2] = 3  => read_data = 30     CORRECT
+--------------------------------------------------
+Byte address      : 40  (0x00000028)
+Expected index    : memory[10]  => value = 100
+[BUG]  address[8:0]  = 40  => read_data = 400  WRONG <---
+[FIX]  address[10:2] = 10  => read_data = 100     CORRECT
+
+==================================================
+  WRITE-THEN-READ TEST                           
+==================================================
+--------------------------------------------------
+WRITE 0xdeadbeef to byte address 8, then read back:
+[BUG]  wrote to memory[8], reads memory[8] => 3735928559             OK
+[FIX]  wrote to memory[2], reads memory[2] => 3735928559             OK
+--------------------------------------------------
+WRITE 0xcafebabe to byte address 20, then read back:
+[BUG]  wrote to memory[20], reads memory[20] => 3405691582             OK
+[FIX]  wrote to memory[5], reads memory[5] => 3405691582             OK
+==================================================
+  DONE
+==================================================
+$finish called at time : 96 ns : File "C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sim_1/new/datamem_test.v" Line 181
