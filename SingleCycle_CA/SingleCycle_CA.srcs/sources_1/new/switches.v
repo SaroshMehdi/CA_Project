@@ -1,35 +1,23 @@
 `timescale 1ns / 1ps
 module switches(
-    input  wire        clk, rst,
-    input  wire [15:0] btns,
-    input  wire [31:0] writeData,
-    input  wire        writeEnable,
+    input  wire [15:0] switches_in,
+    input  wire [31:0] memAddress,
     input  wire        readEnable,
-    input  wire [29:0] memAddress,
-    input  wire [15:0] switches,
-    output reg  [31:0] readData
+    output wire [31:0] readData
 );
+    // Priority encoder - highest active switch wins
+    wire [15:0] encoded = 
+        switches_in[15] ? 16'd15 : switches_in[14] ? 16'd14 :
+        switches_in[13] ? 16'd13 : switches_in[12] ? 16'd12 :
+        switches_in[11] ? 16'd11 : switches_in[10] ? 16'd10 :
+        switches_in[9]  ? 16'd9  : switches_in[8]  ? 16'd8  :
+        switches_in[7]  ? 16'd7  : switches_in[6]  ? 16'd6  :
+        switches_in[5]  ? 16'd5  : switches_in[4]  ? 16'd4  :
+        switches_in[3]  ? 16'd3  : switches_in[2]  ? 16'd2  :
+        switches_in[1]  ? 16'd1  : 16'd0;
 
-    reg [7:0] switchData [3:0]; 
-    localparam [29:0] SW_ADDR = 30'h00000001;
-
-    always @(posedge clk) begin
-        if (rst) begin
-            readData <= 32'd0;
-            switchData[0] <= 8'd0;
-            switchData[1] <= 8'd0;
-            switchData[2] <= 8'd0;
-            switchData[3] <= 8'd0;
-        end else begin
-            switchData[0] <= switches[7:0];
-            switchData[1] <= switches[15:8];
-            switchData[2] <= 8'd0;
-            switchData[3] <= 8'd0;
-            
-            if (readEnable && memAddress == SW_ADDR)
-                readData <= {16'd0, switches};
-            else
-                readData <= 32'd0;
-        end
-    end
+    // Only respond when address bits 9:8 == 2'b11 (768-1023)
+    assign readData = (readEnable && (memAddress[9:8] == 2'b11)) 
+                      ? {16'd0, encoded} 
+                      : 32'd0;
 endmodule

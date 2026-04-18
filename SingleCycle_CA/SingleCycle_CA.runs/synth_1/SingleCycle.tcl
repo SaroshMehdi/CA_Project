@@ -101,6 +101,7 @@ read_verilog -library xil_defaultlib {
   D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v
   D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/switches.v
   D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/led.v
+  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/7seg.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

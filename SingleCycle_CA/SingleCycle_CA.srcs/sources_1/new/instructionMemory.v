@@ -2,14 +2,13 @@ module instructionMemory #(
     parameter OPERAND_LENGTH = 31
 )(
     input [OPERAND_LENGTH:0] instAddress,
-    output reg [31:0] instruction
+    output [31:0] instruction
 );
-    reg [7:0] memory [0:255];     
+    reg [31:0] memory [0:63];     
     initial begin
-        $readmemh("machine_code.txt", memory);
+        // Only use the file. No for loops!
+        $readmemh("machine_code.txt", memory); 
     end
-    always @(*) begin
-        
-        instruction = {memory[instAddress+3], memory[instAddress+2], memory[instAddress+1], memory[instAddress]};
-    end
+    // Word-aligned: byte address / 4 = index
+    assign instruction = memory[instAddress[7:2]]; 
 endmodule
