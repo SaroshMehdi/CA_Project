@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/impl_1/SingleCycle.tcl"
+  variable script "D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/impl_1/SingleCycle.tcl"
   variable category "vivado_impl"
 }
 
@@ -121,22 +121,22 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 3
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.cache/wt [current_project]
-  set_property parent.project_path C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.xpr [current_project]
-  set_property ip_output_repo C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/wt [current_project]
+  set_property parent.project_path D:/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr [current_project]
+  set_property ip_output_repo D:/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.dcp
+  add_files -quiet D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc
+  read_xdc D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

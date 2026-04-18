@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc rfile:../../../SingleCycle_CA.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc rfile:../../../SingleCycle_CA.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

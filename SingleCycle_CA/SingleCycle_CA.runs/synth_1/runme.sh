@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1'
+HD_PWD='D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

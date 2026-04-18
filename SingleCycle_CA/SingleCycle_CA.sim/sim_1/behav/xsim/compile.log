@@ -1,6 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sim_1/new/datamem_test.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sim_1/new/datamem_test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DataMemory_BUG
 INFO: [VRFC 10-311] analyzing module DataMemory_FIXED
 INFO: [VRFC 10-311] analyzing module tb_DataMemory_compare
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

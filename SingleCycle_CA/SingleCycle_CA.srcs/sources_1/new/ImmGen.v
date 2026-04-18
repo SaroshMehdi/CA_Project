@@ -27,7 +27,7 @@ module ImmGen (
 
             // B-type: imm[12|10:5|4:1|11]
             BRANCH: begin
-                imm = {{19{instruction[31]}}, instruction[31], instruction[7],
+                imm = {{20{instruction[31]}}, instruction[31], instruction[7],
                         instruction[30:25], instruction[11:8]};
             end
 

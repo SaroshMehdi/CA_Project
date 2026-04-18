@@ -2,12 +2,12 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Apr 14 15:30:08 2026
-# Process ID: 19996
-# Current directory: C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1
+# Start of session at: Sat Apr 18 19:00:00 2026
+# Process ID: 8000
+# Current directory: D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1
 # Command line: vivado.exe -log SingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycle.tcl
-# Log file: C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.vds
-# Journal file: C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1\vivado.jou
+# Log file: D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.vds
+# Journal file: D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source SingleCycle.tcl -notrace
 Command: synth_design -top SingleCycle -part xc7a35tcpg236-1
@@ -17,193 +17,193 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28560
+INFO: [Synth 8-7075] Helper process launched with PID 356
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1024.930 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1028.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'SingleCycle' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ProgCounter' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'ProgCounter' (1#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v:2]
-INFO: [Synth 8-6157] synthesizing module 'PcAdd4' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'PcAdd4' (2#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v:2]
-INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SingleCycle' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ProgCounter' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ProgCounter' (1#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PcAdd4' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'PcAdd4' (2#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v:2]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:1]
 	Parameter OPERAND_LENGTH bound to: 31 - type: integer 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'machine_code.txt'; please make sure the file is added to project and has read permission, ignoring [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:9]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'machine_code.txt'; please make sure the file is added to project and has read permission, ignoring [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:9]
 
 Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
 	1: Unable to determine number of words or word size in RAM. 
 	2: No valid read/write found for RAM. 
 RAM dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (3#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MainControl' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'MainControl' (4#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v:3]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (5#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v:2]
-INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (3#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MainControl' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MainControl' (4#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (5#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v:2]
 	Parameter I_ALU bound to: 7'b0010011 
 	Parameter LOAD bound to: 7'b0000011 
 	Parameter STORE bound to: 7'b0100011 
 	Parameter BRANCH bound to: 7'b1100011 
-INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (6#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v:2]
-INFO: [Synth 8-6157] synthesizing module 'ALUControl' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:2]
-INFO: [Synth 8-226] default block is never used [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (7#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:2]
-INFO: [Synth 8-6157] synthesizing module 'Mux2x1' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Mux2x1' (8#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v:2]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ALU_1Bit' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ALU_1Bit' (9#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'BranchAdder' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'BranchAdder' (11#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v:2]
-INFO: [Synth 8-6157] synthesizing module 'DataMemory' [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (12#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'SingleCycle' (13#1) [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (6#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALUControl' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:2]
+INFO: [Synth 8-226] default block is never used [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ALUControl' (7#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Mux2x1' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Mux2x1' (8#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_1Bit' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_1Bit' (9#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BranchAdder' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'BranchAdder' (11#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (12#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'SingleCycle' (13#1) [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.930 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1028.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.930 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1028.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.930 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1028.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1024.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1028.465 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:6]
+Parsing XDC File [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btnC'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:6]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:11]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:12]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:15]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:16]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:19]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:20]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:21]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:22]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:24]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:28]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:29]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:30]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:31]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:32]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:33]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:34]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:35]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:36]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:38]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:39]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:40]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:41]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc:42]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SingleCycle_propImpl.xdc].
+Finished Parsing XDC File [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SingleCycle_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/SingleCycle_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1036.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1055.121 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1036.004 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1055.121 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -241,25 +241,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1036.004 ; gain = 11.074
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -277,37 +277,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,25 +331,25 @@ Report Cell Usage:
 |6     |OBUF   |    64|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1037.469 ; gain = 1.465
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1037.469 ; gain = 12.539
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1055.121 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1055.121 ; gain = 26.656
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1037.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1055.980 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1047.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1057.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 42 Infos, 33 Warnings, 34 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1047.371 ; gain = 22.441
-INFO: [Common 17-1381] The checkpoint 'C:/Users/saros/Downloads/project_1/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1057.645 ; gain = 29.180
+INFO: [Common 17-1381] The checkpoint 'D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SingleCycle_utilization_synth.rpt -pb SingleCycle_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 14 15:30:34 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 18 19:00:24 2026...
