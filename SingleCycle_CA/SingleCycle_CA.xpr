@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="D:/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8278c67cfe1343a0a18ec597b905aea1"/>
@@ -211,6 +211,12 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/SingleCycle_CA/machine_code.txt">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/machine_code.txt"/>
+          <Attr Name="ImportTime" Val="1776602963"/>
         </FileInfo>
       </File>
       <Config>
