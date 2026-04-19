@@ -122,7 +122,11 @@ module SingleCycle(
         .BranchTarget(BranchTarget)
     );
     // Branch is taken only when Branch control is high and ALU result is zero
-    assign PCSrc = Branch & Zero;
+//    assign PCSrc = Branch & Zero;
+//FIXED AND ADDED BNE CONDITION HERE WHICH WAS MISSING IN PREV INSTRUCTION ^^
+    wire is_BNE = (instruction[14:12] == 3'b001);
+    assign PCSrc = Branch & (is_BNE ? ~Zero : Zero);
+    
     Mux2x1 u_PCMux (
         .in0(PC_Plus4),
         .in1(BranchTarget),
