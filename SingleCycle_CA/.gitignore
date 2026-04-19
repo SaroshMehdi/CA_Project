@@ -1,0 +1,9 @@
+*.log
+*.jou
+*.backup.*
+*.str
+.cache/
+.sim/
+*.wdf
+*.wpc
+webtalk*
