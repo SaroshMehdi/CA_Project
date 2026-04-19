@@ -11,3 +11,5 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {{C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/machine_code.txt}}

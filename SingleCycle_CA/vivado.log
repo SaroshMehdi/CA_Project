@@ -18,3 +18,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
 open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 1015.586 ; gain = 0.000
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {{C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/machine_code.txt}}
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 19 18:58:22 2026...
