@@ -1,14 +1,11 @@
-module instructionMemory #(
-    parameter OPERAND_LENGTH = 31
-)(
-    input [OPERAND_LENGTH:0] instAddress,
+`timescale 1ns / 1ps
+module instructionMemory (
+    input  [31:0] instAddress,
     output [31:0] instruction
 );
-    reg [31:0] memory [0:63];     
+    reg [31:0] rom [0:63];
     initial begin
-        // Only use the file. No for loops!
-        $readmemh("machine_code.txt", memory); 
+        $readmemh("task a.mem", rom);
     end
-    // Word-aligned: byte address / 4 = index
-    assign instruction = memory[instAddress[7:2]]; 
+    assign instruction = rom[instAddress[7:2]];
 endmodule

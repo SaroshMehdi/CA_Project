@@ -1,58 +1,62 @@
 `timescale 1ns / 1ps
-
 module Seg7(
-    input wire clk,
-    input wire rst,
-    input wire [7:0] left_val,  // Instruction opcode (Left 2 digits)
-    input wire [7:0] right_val, // Countdown value (Right 2 digits)
-    output reg [6:0] seg,       // 7-segment patterns
-    output reg [3:0] an         // Anode selectors
+    input  wire        clk,
+    input  wire        rst,
+    input  wire [15:0] val,
+    output reg  [6:0]  seg,
+    output reg  [3:0]  an
 );
-
-    // 20-bit counter to step down the 100MHz clock to a ~95Hz refresh rate
-    reg [19:0] refresh_counter;
+    // Fast counter for multiplexing 3 displays
+    reg [17:0] refresh_counter;
     always @(posedge clk or posedge rst) begin
-        if (rst)
-            refresh_counter <= 0;
-        else
-            refresh_counter <= refresh_counter + 1;
+        if (rst) refresh_counter <= 0;
+        else     refresh_counter <= refresh_counter + 1;
     end
+    wire [1:0] led_activation = refresh_counter[17:16];
 
-    // Use the top 2 bits of the counter to select which of the 4 digits to turn on
-    wire [1:0] digit_sel = refresh_counter[19:18];
-    reg [3:0] hex_digit;
+    // Binary to Decimal (handles 0 to 999)
+    wire [3:0] hundreds = (val / 100) % 10;
+    wire [3:0] tens     = (val / 10)  % 10;
+    wire [3:0] ones     =  val        % 10;
 
+    reg [3:0] current_digit;
+
+    // Multiplexing logic - 3 left-most digits
     always @(*) begin
-        case(digit_sel)
-            2'b00: begin an = 4'b1110; hex_digit = right_val[3:0]; end   
-            2'b01: begin an = 4'b1101; hex_digit = right_val[7:4]; end   
-            2'b10: begin an = 4'b1011; hex_digit = left_val[3:0];  end   
-            2'b11: begin an = 4'b0111; hex_digit = left_val[7:4];  end   
-            default: begin an = 4'b1111; hex_digit = 4'b0000; end
+        case(led_activation)
+            2'b00: begin
+                an = 4'b0111; // Hundreds
+                current_digit = hundreds;
+            end
+            2'b01: begin
+                an = 4'b1011; // Tens
+                current_digit = tens;
+            end
+            2'b10: begin
+                an = 4'b1101; // Ones
+                current_digit = ones;
+            end
+            default: begin
+                an = 4'b1111; // Rightmost digit OFF
+                current_digit = 4'd0;
+            end
         endcase
     end
 
-    // Hex to 7-Segment Decoder
+    // Seven segment decoder
     always @(*) begin
-        case(hex_digit)
-            4'h0: seg = 7'b1000000;
-            4'h1: seg = 7'b1111001;
-            4'h2: seg = 7'b0100100;
-            4'h3: seg = 7'b0110000;
-            4'h4: seg = 7'b0011001;
-            4'h5: seg = 7'b0010010;
-            4'h6: seg = 7'b0000010;
-            4'h7: seg = 7'b1111000;
-            4'h8: seg = 7'b0000000;
-            4'h9: seg = 7'b0010000;
-            4'hA: seg = 7'b0001000;
-            4'hB: seg = 7'b0000011;
-            4'hC: seg = 7'b1000110;
-            4'hD: seg = 7'b0100001;
-            4'hE: seg = 7'b0000110;
-            4'hF: seg = 7'b0001110;
+        case(current_digit)
+            4'd0: seg = 7'b1000000;
+            4'd1: seg = 7'b1111001;
+            4'd2: seg = 7'b0100100;
+            4'd3: seg = 7'b0110000;
+            4'd4: seg = 7'b0011001;
+            4'd5: seg = 7'b0010010;
+            4'd6: seg = 7'b0000010;
+            4'd7: seg = 7'b1111000;
+            4'd8: seg = 7'b0000000;
+            4'd9: seg = 7'b0010000;
             default: seg = 7'b1111111;
         endcase
     end
-
 endmodule

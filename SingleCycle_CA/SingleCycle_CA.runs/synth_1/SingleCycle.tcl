@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.tcl"
+  variable script "C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/synth_1/SingleCycle.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,38 +70,40 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/wt [current_project]
-set_property parent.project_path D:/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem {{C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/task a.mem}}
 read_verilog -library xil_defaultlib {
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/switches.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/led.v
-  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/7seg.v
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALUControl.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ALU_1Bit.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/BranchAdder.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/DataMemory.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ImmGen.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/MainControl.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/PcAdd4.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/ProgCounter.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/RegisterFile.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/instructionMemory.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/SingleCycle.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/switches.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/led.v}
+  {C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/7seg.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -112,8 +114,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc]
+read_xdc {{C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/constrs_1/new/constraints.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

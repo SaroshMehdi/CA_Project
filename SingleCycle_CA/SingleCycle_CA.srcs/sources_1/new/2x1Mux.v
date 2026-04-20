@@ -5,5 +5,5 @@ module Mux2x1(
     input  wire        sel,
     output wire [31:0] out
 );
-    assign out = sel ? in1 : in0; 
+    assign out = sel ? in1 : in0;
 endmodule

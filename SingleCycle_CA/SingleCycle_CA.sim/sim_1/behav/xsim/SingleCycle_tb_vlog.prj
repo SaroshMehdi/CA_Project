@@ -15,6 +15,7 @@ verilog xil_defaultlib  \
 "../../../../SingleCycle_CA.srcs/sources_1/new/SingleCycle.v" \
 "../../../../SingleCycle_CA.srcs/sources_1/new/switches.v" \
 "../../../../SingleCycle_CA.srcs/sources_1/new/led.v" \
+"../../../../SingleCycle_CA.srcs/sources_1/new/7seg.v" \
 "../../../../SingleCycle_CA.srcs/sim_1/new/SingleCycle_tb.v" \
 "../../../../SingleCycle_CA.srcs/sim_1/new/datamem_test.v" \
 

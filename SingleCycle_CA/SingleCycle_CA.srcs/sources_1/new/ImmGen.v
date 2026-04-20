@@ -1,39 +1,29 @@
 `timescale 1ns / 1ps
-module ImmGen (
+module ImmGen(
     input  wire [31:0] instruction,
     output reg  [31:0] imm
 );
-
     wire [6:0] opcode = instruction[6:0];
-
-    localparam I_ALU  = 7'b0010011;
-    localparam LOAD   = 7'b0000011;
-    localparam STORE  = 7'b0100011;
-    localparam BRANCH = 7'b1100011;
-
     always @(*) begin
-        case (opcode)
-
-            // I-type: instr[31:20]
-            I_ALU,
-            LOAD: begin
+        case(opcode)
+            // I-Type (ADDI, LW, JALR)
+            7'b0010011, 7'b0000011, 7'b1100111:
                 imm = {{20{instruction[31]}}, instruction[31:20]};
-            end
-
-            // S-type: instr[31:25] | instr[11:7]
-            STORE: begin
+            // S-Type (SW)
+            7'b0100011:
                 imm = {{20{instruction[31]}}, instruction[31:25], instruction[11:7]};
-            end
-
-            // B-type: imm[12|10:5|4:1|11]
-            BRANCH: begin
-                imm = {{20{instruction[31]}}, instruction[31], instruction[7],
-                        instruction[30:25], instruction[11:8]};
-            end
-
-            default: imm = 32'b0;
-
+            // B-Type (BEQ, BNE) - appends 1'b0, BranchAdder does PC+imm directly
+            7'b1100011:
+                imm = {{20{instruction[31]}}, instruction[7],
+                        instruction[30:25], instruction[11:8], 1'b0};
+            // J-Type (JAL)
+            7'b1101111:
+                imm = {{12{instruction[31]}}, instruction[19:12],
+                        instruction[20], instruction[30:21], 1'b0};
+            // U-Type (LUI)
+            7'b0110111:
+                imm = {instruction[31:12], 12'b0};
+            default: imm = 32'd0;
         endcase
     end
-
 endmodule
