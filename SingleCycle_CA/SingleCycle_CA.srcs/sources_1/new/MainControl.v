@@ -40,9 +40,6 @@ module MainControl(
             7'b1100111: begin // JALR
                 RegWrite = 1'b1; Jalr = 1'b1;
             end
-            7'b0110111: begin // LUI
-                RegWrite = 1'b1; Lui = 1'b1;
-            end
             default: begin end
         endcase
     end

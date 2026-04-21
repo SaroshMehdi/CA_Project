@@ -1,0 +1,57 @@
+// task_b.mem  -- FIXED VERSION
+// Switch 1 (encoded=1) -> SLLI        -> LEDs 000A (10)
+// Switch 2 (encoded=2) -> JALR        -> LEDs 0014 (20)
+// Switch 3 (encoded=3) -> BLT taken   -> LEDs 001E (30)
+// Switch 4 (encoded=4) -> BLT not taken -> LEDs 0028 (40)
+
+// _start: set up base addresses
+@00 20000493   // addi x9,  x0, 0x200   -- LED  base address
+@01 30000913   // addi x18, x0, 0x300   -- SW   base address
+
+// poll: read switches into x10
+@02 00092503   // lw   x10, 0(x18)
+
+// test1: SLLI (sw1 -> encoded=1)
+@03 00100293   // addi x5, x0, 1
+@04 00551A63   // bne  x10, x5, +20  -> @09 if x10!=1
+@05 00500293   // addi x5, x0, 5
+@06 00129413   // slli x8, x5, 1     -> x8=10
+@07 0084A023   // sw   x8, 0(x9)     -> LED=0x000A
+@08 FE0004E3   // beq  x0, x0, -24   -> @02
+
+// test2: JALR (sw2 -> encoded=2)
+@09 00200293   // addi x5, x0, 2
+@0A 00551C63   // bne  x10, x5, +24  -> @10 if x10!=2
+@0B 00C000EF   // jal  x1, +12       -> call @0E
+@0C 0084A023   // sw   x8, 0(x9)     -> LED=0x0014
+@0D FC000AE3   // beq  x0, x0, -44   -> @02
+
+// subroutine
+@0E 01400413   // addi x8, x0, 20
+@0F 00008067   // jalr x0, 0(x1)
+
+// test3: BLT taken (sw3 -> encoded=3)
+@10 00300293   // addi x5, x0, 3
+@11 02551263   // bne  x10, x5, +36  -> @1A if x10!=3
+@12 00500313   // addi x6, x0, 5
+@13 00A00393   // addi x7, x0, 10
+@14 00734663   // blt  x6, x7, +12   -> @17 (taken: 5<10)
+@15 00000413   // addi x8, x0, 0     (not-taken path)
+@16 FA0008E3   // beq  x0, x0, -80   -> @02
+@17 01E00413   // addi x8, x0, 30
+@18 0084A023   // sw   x8, 0(x9)     -> LED=0x001E
+@19 FA0002E3   // beq  x0, x0, -92   -> @02  *** FIXED (was -88 -> @03) ***
+
+// test4: BLT not taken (sw4 -> encoded=4)
+@1A 00400293   // addi x5, x0, 4
+@1B 00551E63   // bne  x10, x5, +28  -> @22 if x10!=4
+@1C 00A00313   // addi x6, x0, 10
+@1D 00500393   // addi x7, x0, 5
+@1E 00734663   // blt  x6, x7, +12   -> @21 (not taken: 10<5 false)
+@1F 02800413   // addi x8, x0, 40
+@20 0084A023   // sw   x8, 0(x9)     -> LED=0x0028
+@21 F80002E3   // beq  x0, x0, -124  -> @02  *** FIXED (was -96 -> @09) ***
+
+// default: clear LEDs
+@22 0004A023   // sw   x0, 0(x9)     -> LED=0
+@23 F6000FE3   // beq  x0, x0, -130  -> @02

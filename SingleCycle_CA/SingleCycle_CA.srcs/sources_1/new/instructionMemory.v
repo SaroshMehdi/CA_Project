@@ -5,7 +5,7 @@ module instructionMemory (
 );
     reg [31:0] rom [0:63];
     initial begin
-        $readmemh("task a.mem", rom);
+        $readmemh("task_b.mem", rom);
     end
     assign instruction = rom[instAddress[7:2]];
 endmodule

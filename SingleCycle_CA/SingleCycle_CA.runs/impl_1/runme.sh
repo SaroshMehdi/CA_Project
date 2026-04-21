@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/aleen/Desktop/Aleenas stuff/CA project/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/impl_1'
+HD_PWD='D:/CA_Project/SingleCycle_CA/SingleCycle_CA.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log SingleCycle.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SingleCycle.tcl -notrace
 
 

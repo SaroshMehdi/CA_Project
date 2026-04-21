@@ -28,7 +28,7 @@ module SingleCycle(
     wire [31:0] instruction;
     
     // Control Signal Wires
-    wire Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite, Jump, Jalr, Lui;
+    wire Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite, Jump, Jalr;
     wire [1:0] ALUOp;
     wire [3:0] ALU_Ctrl_Signal;
     wire PCSrc;
@@ -40,6 +40,7 @@ module SingleCycle(
     // ALU Wires
     wire [31:0] ALU_B, ALUResult;
     wire Zero;
+    wire Less;
     
     // Memory & Branching Wires
     wire [31:0] mem_read_data;
@@ -117,7 +118,8 @@ module SingleCycle(
         .B(ALU_B),
         .ALUControl(ALU_Ctrl_Signal),
         .ALUResult(ALUResult),
-        .Zero(Zero)
+        .Zero(Zero),
+        .Less(Less)
     );
     
     BranchAdder u_brAdd (
@@ -130,15 +132,18 @@ module SingleCycle(
     // BRANCH AND JUMP DATAPATH LOGIC
     // =========================================================
     wire is_BNE = (instruction[14:12] == 3'b001);
-    assign PCSrc = (Branch & (is_BNE ? ~Zero : Zero)) | Jump;
+    wire is_BLT = (instruction[14:12] == 3'b100);
+    
+    assign PCSrc = (Branch & (is_BNE ? ~Zero  :
+                              is_BLT ? Less   :
+                                       Zero)) | Jump;
 
     wire [31:0] PC_JumpBranch = PCSrc ? BranchTarget : PCPlus4;
     assign PCNext = Jalr ? (ALUResult & 32'hFFFFFFFE) : PC_JumpBranch;
 
-    assign WriteData = (Jump | Jalr) ? PCPlus4  :
-                       (Lui)         ? imm       :
+    assign WriteData = (Jump | Jalr) ? PCPlus4       :
                        (MemtoReg)    ? final_read_data :
-                                       ALUResult;
+                                   ALUResult;
 
     // =========================================================
     // ADDRESS DECODING & I/O

@@ -5,7 +5,8 @@ module ALU(
     input  wire [31:0] B,
     input  wire [3:0]  ALUControl,
     output reg  [31:0] ALUResult,
-    output wire        Zero
+    output wire        Zero,
+    output wire        Less
 );
 
     wire [32:0] carry;
@@ -35,5 +36,6 @@ module ALU(
         endcase
     end
     assign Zero = (ALUResult == 32'd0);
+    assign Less = slice_result[31]; // sign bit of A - B
 
 endmodule
