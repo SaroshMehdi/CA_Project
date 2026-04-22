@@ -9,13 +9,12 @@ module MainControl(
     output reg        ALUSrc,
     output reg        RegWrite,
     output reg        Jump,
-    output reg        Jalr,
-    output reg        Lui
+    output reg        Jalr
 );
     always @(*) begin
         RegWrite = 0; ALUSrc = 0; MemRead = 0;
         MemWrite = 0; MemtoReg = 0; Branch = 0;
-        Jump = 0; Jalr = 0; Lui = 0;
+        Jump = 0; Jalr = 0;
         ALUOp = 2'b00;
         case(opcode)
             7'b0110011: begin // R-type

@@ -1,9 +1,4 @@
-// task_b.mem  -- FIXED VERSION
-// Switch 1 (encoded=1) -> SLLI        -> LEDs 000A (10)
-// Switch 2 (encoded=2) -> JALR        -> LEDs 0014 (20)
-// Switch 3 (encoded=3) -> BLT taken   -> LEDs 001E (30)
-// Switch 4 (encoded=4) -> BLT not taken -> LEDs 0028 (40)
-
+// task_b.mem
 // _start: set up base addresses
 @00 20000493   // addi x9,  x0, 0x200   -- LED  base address
 @01 30000913   // addi x18, x0, 0x300   -- SW   base address
@@ -40,7 +35,7 @@
 @16 FA0008E3   // beq  x0, x0, -80   -> @02
 @17 01E00413   // addi x8, x0, 30
 @18 0084A023   // sw   x8, 0(x9)     -> LED=0x001E
-@19 FA0002E3   // beq  x0, x0, -92   -> @02  *** FIXED (was -88 -> @03) ***
+@19 FA0002E3   // beq  x0, x0, -92   -> @02 ***
 
 // test4: BLT not taken (sw4 -> encoded=4)
 @1A 00400293   // addi x5, x0, 4
@@ -50,7 +45,7 @@
 @1E 00734663   // blt  x6, x7, +12   -> @21 (not taken: 10<5 false)
 @1F 02800413   // addi x8, x0, 40
 @20 0084A023   // sw   x8, 0(x9)     -> LED=0x0028
-@21 F80002E3   // beq  x0, x0, -124  -> @02  *** FIXED (was -96 -> @09) ***
+@21 F80002E3   // beq  x0, x0, -124  -> @02) ***
 
 // default: clear LEDs
 @22 0004A023   // sw   x0, 0(x9)     -> LED=0

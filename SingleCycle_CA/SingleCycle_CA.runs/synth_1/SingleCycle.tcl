@@ -89,6 +89,7 @@ OPTRACE "Adding files" START { }
 read_mem {
   {D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/task a.mem}
   D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/task_b.mem
+  D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/taskC.mem
 }
 read_verilog -library xil_defaultlib {
   D:/CA_Project/SingleCycle_CA/SingleCycle_CA.srcs/sources_1/new/2x1Mux.v
